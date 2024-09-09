@@ -172,6 +172,19 @@ const YoutubeIcon = () => (
   </svg>
 );
 
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof url != "undefined") {
+      window.location = url;
+    }
+  };
+  gtag("event", "conversion", {
+    send_to: "AW-16694571920/CJP8CK21htEZEJDny5g-",
+    event_callback: callback,
+  });
+  return false;
+}
+
 export default function MusicPlayer() {
   const streamingServices = [
     {
@@ -233,7 +246,13 @@ export default function MusicPlayer() {
                   variant="outline"
                   className="w-full h-16 justify-between bg-gray-700 hover:bg-gray-600 border-gray-600  px-4"
                 >
-                  <Link href={service.stackLink}>
+                  <Link
+                    href={service.stackLink}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      gtag_report_conversion(service.stackLink);
+                    }}
+                  >
                     <div className="flex items-center justify-between h-full w-full">
                       <div className="w-full  relative  flex items-center justify-left">
                         {service.icon}
