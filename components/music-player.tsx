@@ -1,7 +1,9 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { sendGTMEvent } from "@next/third-parties/google";
 
 const stackName = "Echoes of the Heart";
 const coverName = "Echoes of the Heart";
@@ -172,19 +174,6 @@ const YoutubeIcon = () => (
   </svg>
 );
 
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof url != "undefined") {
-      window.location = url;
-    }
-  };
-  gtag("event", "conversion", {
-    send_to: "AW-16694571920/CJP8CK21htEZEJDny5g-",
-    event_callback: callback,
-  });
-  return false;
-}
-
 export default function MusicPlayer() {
   const streamingServices = [
     {
@@ -243,16 +232,13 @@ export default function MusicPlayer() {
                 <Button
                   asChild
                   key={service.name}
+                  onClick={() =>
+                    sendGTMEvent({ event: "buttonClicked", value: "xyz" })
+                  }
                   variant="outline"
                   className="w-full h-16 justify-between bg-gray-700 hover:bg-gray-600 border-gray-600  px-4"
                 >
-                  <Link
-                    href={service.stackLink}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      gtag_report_conversion(service.stackLink);
-                    }}
-                  >
+                  <Link href={service.stackLink}>
                     <div className="flex items-center justify-between h-full w-full">
                       <div className="w-full  relative  flex items-center justify-left">
                         {service.icon}
