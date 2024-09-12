@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { sendGTMEvent } from "@next/third-parties/google";
 
 const stackName = "Echoes of the Heart";
 const coverName = "Echoes of the Heart";
@@ -234,12 +233,6 @@ export default function MusicPlayer() {
                 <Button
                   asChild
                   key={service.name}
-                  onClick={() =>
-                    sendGTMEvent({
-                      event: "buttonClicked",
-                      value: service.value,
-                    })
-                  }
                   variant="outline"
                   className="w-full h-16 justify-between bg-gray-700 hover:bg-gray-600 border-gray-600  px-4"
                 >
