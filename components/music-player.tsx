@@ -178,6 +178,7 @@ export default function MusicPlayer() {
   const streamingServices = [
     {
       name: "Spotify",
+      value: "9",
       icon: <SpotifyIcon />,
       textColor: "text-[#1DB954]",
       stackLink:
@@ -206,6 +207,7 @@ export default function MusicPlayer() {
     // },
     {
       name: "YouTube",
+      value: "1",
       icon: <YoutubeIcon />,
       textColor: "text-[#FF0000]",
       stackLink:
@@ -233,7 +235,10 @@ export default function MusicPlayer() {
                   asChild
                   key={service.name}
                   onClick={() =>
-                    sendGTMEvent({ event: "buttonClicked", value: "xyz" })
+                    sendGTMEvent({
+                      event: "buttonClicked",
+                      value: service.value,
+                    })
                   }
                   variant="outline"
                   className="w-full h-16 justify-between bg-gray-700 hover:bg-gray-600 border-gray-600  px-4"

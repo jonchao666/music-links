@@ -30,7 +30,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <GoogleTagManager gtmId="GTM-M488CN5L" />
+        <GoogleTagManager gtmId="GTM-KZKVG6F9" />
         <SpeedInsights />
 
         {children}
