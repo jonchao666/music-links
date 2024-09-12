@@ -183,27 +183,27 @@ export default function MusicPlayer() {
       stackLink:
         "https://open.spotify.com/track/2MA5iYrj37wTB3z86NrMTL?si=cb0318e77fe24d88",
     },
-    {
-      name: "Apple Music",
-      icon: <AppleMusicIcon />,
-      textColor: "text-[#FA243C]",
-      stackLink:
-        "https://music.apple.com/jp/album/echoes-of-the-heart/1763902696?i=1763902698",
-    },
-    {
-      name: "YouTube Music",
-      icon: <YoutubeMusicIcon />,
-      textColor: "text-[#FF0000]",
-      stackLink:
-        "https://music.youtube.com/playlist?list=OLAK5uy_n3KBwGkl8L3TCxy2Px9w2qlSBniyTZvC8&si=EcgEFXRqXRb4Mfqr",
-    },
-    {
-      name: "Amazon Music",
-      icon: <AmazonMusicIcon />,
-      textColor: "text-[#00A8E1]",
-      stackLink:
-        "https://music.amazon.com/tracks/B0DDR4KWSC?marketplaceId=A1VC38T7YXB528&musicTerritory=JP&ref=dm_sh_q7VFMjjJl6c88Aw51EmCRVv5c",
-    },
+    // {
+    //   name: "Apple Music",
+    //   icon: <AppleMusicIcon />,
+    //   textColor: "text-[#FA243C]",
+    //   stackLink:
+    //     "https://music.apple.com/jp/album/echoes-of-the-heart/1763902696?i=1763902698",
+    // },
+    // {
+    //   name: "YouTube Music",
+    //   icon: <YoutubeMusicIcon />,
+    //   textColor: "text-[#FF0000]",
+    //   stackLink:
+    //     "https://music.youtube.com/playlist?list=OLAK5uy_n3KBwGkl8L3TCxy2Px9w2qlSBniyTZvC8&si=EcgEFXRqXRb4Mfqr",
+    // },
+    // {
+    //   name: "Amazon Music",
+    //   icon: <AmazonMusicIcon />,
+    //   textColor: "text-[#00A8E1]",
+    //   stackLink:
+    //     "https://music.amazon.com/tracks/B0DDR4KWSC?marketplaceId=A1VC38T7YXB528&musicTerritory=JP&ref=dm_sh_q7VFMjjJl6c88Aw51EmCRVv5c",
+    // },
     {
       name: "YouTube",
       icon: <YoutubeIcon />,
