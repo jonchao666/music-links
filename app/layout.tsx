@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { GoogleTagManager } from "@next/third-parties/google";
+import { Analytics } from "@vercel/analytics/react";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -32,7 +33,7 @@ export default function RootLayout({
       >
         <GoogleTagManager gtmId="GTM-KZKVG6F9" />
         <SpeedInsights />
-
+        <Analytics />
         {children}
       </body>
     </html>
