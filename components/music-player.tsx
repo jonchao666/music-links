@@ -229,21 +229,23 @@ export default function MusicPlayer() {
             <h2 className="text-2xl font-bold text-center">{stackName}</h2>
             <div className="space-y-4">
               {streamingServices.map((service) => (
-                <Button
+                <a
                   key={service.name}
-                  variant="outline"
-                  className="w-full h-16 justify-between bg-gray-700 hover:bg-gray-600 border-gray-600  px-4"
+                  href={service.stackLink}
+                  className="w-full block"
                 >
-                  <a href={service.stackLink}>
+                  <Button
+                    variant="outline"
+                    className="w-full h-16 justify-between bg-gray-700 hover:bg-gray-600 border-gray-600 px-4"
+                  >
                     <div className="flex items-center justify-between h-full w-full">
-                      <div className="w-full  relative  flex items-center justify-left">
+                      <div className="w-full relative flex items-center justify-left">
                         {service.icon}
                       </div>
-
                       <span className="font-bold">PLAY ▶</span>
                     </div>
-                  </a>
-                </Button>
+                  </Button>
+                </a>
               ))}
             </div>
           </div>
