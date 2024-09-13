@@ -177,7 +177,7 @@ export default function MusicPlayer() {
   const streamingServices = [
     {
       name: "Spotify",
-      value: "9",
+
       icon: <SpotifyIcon />,
       textColor: "text-[#1DB954]",
       stackLink:
@@ -206,7 +206,7 @@ export default function MusicPlayer() {
     // },
     {
       name: "YouTube",
-      value: "1",
+
       icon: <YoutubeIcon />,
       textColor: "text-[#FF0000]",
       stackLink:
@@ -231,12 +231,11 @@ export default function MusicPlayer() {
             <div className="space-y-4">
               {streamingServices.map((service) => (
                 <Button
-                  asChild
                   key={service.name}
                   variant="outline"
                   className="w-full h-16 justify-between bg-gray-700 hover:bg-gray-600 border-gray-600  px-4"
                 >
-                  <Link href={service.stackLink}>
+                  <a href={service.stackLink}>
                     <div className="flex items-center justify-between h-full w-full">
                       <div className="w-full  relative  flex items-center justify-left">
                         {service.icon}
@@ -244,7 +243,7 @@ export default function MusicPlayer() {
 
                       <span className="font-bold">PLAY ▶</span>
                     </div>
-                  </Link>
+                  </a>
                 </Button>
               ))}
             </div>
